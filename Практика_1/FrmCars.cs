@@ -17,7 +17,6 @@ namespace Практика_1
 
         public FrmCars()
         {
-            // чтобы ничего не “съезжало” и текст не резался из-за DPI
             AutoScaleMode = AutoScaleMode.None;
 
             InitializeComponent();
@@ -31,7 +30,6 @@ namespace Практика_1
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
 
-            // 4 поля как на картинке: V1, V2, S, T + справа результат D
             int topY = 35;
             int boxW = 140;
             int boxH = 24;
@@ -41,9 +39,8 @@ namespace Практика_1
             int x2 = x1 + boxW + gapX;
             int x3 = x2 + boxW + gapX;
             int x4 = x3 + boxW + gapX;
-            int x5 = x4 + boxW + gapX; // результат
+            int x5 = x4 + boxW + gapX; 
 
-            // Подписи маленькие сверху (как часто делают в методичках)
             Controls.Add(MakeSmallLabel("V1", x1, topY - 18));
             Controls.Add(MakeSmallLabel("V2", x2, topY - 18));
             Controls.Add(MakeSmallLabel("S", x3, topY - 18));
@@ -59,7 +56,6 @@ namespace Практика_1
 
             Controls.AddRange(new Control[] { txtV1, txtV2, txtS, txtT, txtD });
 
-            // Кнопки снизу как в примере
             btnCount = new Button
             {
                 Name = "btnCount",
@@ -81,7 +77,6 @@ namespace Практика_1
             Controls.Add(btnCount);
             Controls.Add(btnExit);
 
-            // (Можно оставить подсказку формулы мелким текстом внизу слева)
             var hint = new Label
             {
                 AutoSize = true,

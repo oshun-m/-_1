@@ -14,7 +14,7 @@ namespace Практика_1
             AutoScaleMode = AutoScaleMode.None;
 
             InitializeComponent();
-            BuildMenu(); // <- меню создаём сразу, не ждём Load
+            BuildMenu(); 
         }
 
         private void InitializeComponent()
